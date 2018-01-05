@@ -1,0 +1,23 @@
+.app_title {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block_title {
+    text-align: center;
+}
+
+.store_list {
+    list-style: none;
+    display: block;
+}
+
+.store_item {
+    display: block;
+}

@@ -22,15 +22,20 @@ var products = [];
 
 var listLength = document.getElementsByTagName('li').length;
 
+
 function buyProduct() {
-   for(var i = 0; i < listLength; i++) {
-       var name = document.getElementsByClassName('item_name')[i].innerHTML;
-       var price = document.getElementsByClassName('item_price')[i].innerHTML;
-       price = parseFloat(price);
-       var weight = document.getElementsByClassName('item_weight')[i].value;
-       weight = parseFloat(weight);
-       var newProduct = new Product(name, price, weight);
-       products.push(newProduct);
-       console.log(products);
-   }
+
+    for(var i = 0; i < listLength; i++) {
+        var name = document.getElementsByClassName('item_name')[i].innerHTML;
+        var price = document.getElementsByClassName('item_price')[i].innerHTML;
+        var weight = document.getElementsByClassName('item_weight')[i].value;
+        price = parseFloat(price);
+        weight = parseFloat(weight);
+        var newProduct = new Product(name, price, weight);
+        if(!isNaN(weight)) {
+            products.push(newProduct);
+        }
+    }
+
+    console.info(products);
 };

@@ -21,3 +21,7 @@
 .store_item {
     display: block;
 }
+
+#basket_list {
+    list-style: none;
+}

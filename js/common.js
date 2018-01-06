@@ -7,21 +7,9 @@ var Product = function(name, price, weight) {
     }
 };
 
-// var storeList = document.getElementById('store_list');
-
-//
-// storeList.addEventListener('click', function(e){
-//     var el = e.target;
-//     while (el && el.tagName !== 'LI') {
-//         el = el.parentNode
-//     }
-//
-// }, false);
-
 var products = [];
 
 var listLength = document.getElementsByTagName('li').length;
-
 
 function buyProduct() {
 
@@ -35,7 +23,9 @@ function buyProduct() {
         if(!isNaN(weight)) {
             products.push(newProduct);
         }
+        document.getElementsByClassName('item_weight')[i].value =  '';
     }
-
     console.info(products);
 };
+
+
